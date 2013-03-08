@@ -35,3 +35,4 @@
 <%= link_to 'Remove', @product, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back to Products', products_path %> | 
 <%= link_to 'Back to Publisher', publisher_path(@product.publisher) %>
+<%= link_to 'Back to Category', category_path(@product.category) %>

@@ -4,7 +4,7 @@
 <%= link_to 'Remove', @category, method: :delete, data: { confirm: "Are you sure?" } %> |
 <%= link_to 'Back', categories_path %>
 
-<h2>Products of the <%= @category.name%> Category: </h2>
+<h2>Products in the <%= @category.name%> Category: </h2>
 <hr />
 <% @products.each do |product| %>
   <div class="product">

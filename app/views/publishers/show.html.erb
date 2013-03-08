@@ -1,0 +1,18 @@
+<h1><%= @publisher.name %></h1>
+
+<%= link_to 'Edit', edit_publisher_path(@publisher) %> |
+<%= link_to 'Remove', @publisher, method: :delete, data: { confirm: "All games from this publisher will also be deleted. \nAre you sure?" } %> |
+<%= link_to 'Back', publishers_path %>
+
+<h2>Products from <%= @publisher.name%>: </h2>
+<hr />
+<% @products.each do |product| %>
+  <div class="product">
+    <h2><%= link_to product.name, product %></h2>
+    <div class="details">
+      <%= number_to_currency(product.price) %> |
+      <%= product.categories.map(&:name).join(", ") %> |
+      <%= product.publisher.name %>
+    </div>
+  </div>
+<% end %>

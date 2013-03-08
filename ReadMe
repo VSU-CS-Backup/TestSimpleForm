@@ -1,0 +1,12 @@
+1. The simple_form gem is making forms very easy to use in Rails. It is also able to deal with table associations. (See https://github.com/plataformatec/simple_form/)
+
+2. Make sure the following gem is in the Gemfile
+gem 'simple_form'
+
+3. Execute the following commands
+> bundle install
+> rails g simple_form:install
+> rake db:migrate
+> rake db:seed
+> rails server
+

@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(:version => 20120302191013) do
     t.date     "released_on"
     t.integer  "publisher_id"
     t.integer  "rating"
-    t.boolean  "discontinued"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.boolean  "discontinued", :default => false, :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   create_table "publishers", :force => true do |t|
